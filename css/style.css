@@ -5,6 +5,7 @@
 }
 html{
     font-family: 'Roboto', sans-serif;
+    color: #23272a;
 
 }
 /* container header */
@@ -73,10 +74,11 @@ header::after{
 }
 
 /* sezioni homepage */
+section{
+    width: 100%;
+}
 main section:first-child{
     background: url(../img/jumbo.png);
-    width: 100%;
-    /* height: 70vh; */
     background-size: cover;
     background-repeat: no-repeat;
 } 
@@ -87,7 +89,7 @@ h1{
     padding: 7rem 0 2rem;
     
 }
-.download, .content{
+.download{
     text-align: center;
     width: 40%;
     margin: 0 auto;
@@ -97,10 +99,10 @@ p{
     font-size: 22px;
     font-weight: 500;
 }
-.content > p{
+.download > p{
 margin: 2rem 0;
 }
-.download button{
+.content button{
     padding: 0.7em 1.4em;
     border-radius: 50px;;
     border: none;
@@ -113,13 +115,52 @@ margin: 2rem 0;
     background-color: #23272a;
     color:white;
 }
-/* 
-main section:nth-of-type(even){
-    background-color: #f6f6f6;
-    width: 100%;
-    height: 300px;
+
+/* inizio sezioni simili */
+section:not(:last-child, :first-child){
+    height: 90vh;
 }
-section:nth-of-type( odd){
-    width: 100%;
-    height: 300px;
-} */
+main section:nth-of-type(odd){
+    background-color: #f6f6f6;
+}
+.content{
+    width:70%;
+    margin: 3em auto;
+}
+.image{
+    float:left;
+    margin-top: 5rem; 
+
+}
+.text{
+    width: 30%;
+    float:left;
+}
+/* margin elementi a sinistra */
+.content > :first-child{
+    margin-right: 7rem;
+    margin-left: 5rem;
+}
+/* fine margin */
+
+.content::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+section:last-child{
+    text-align: center;
+
+}
+.big-image{
+    width: 90%;
+    height: auto;
+}
+h3{
+    font-size:2em;
+}
+section:last-child button{
+    background-color: #8ea1e1;
+    color: white;
+    margin: 2rem 0 5rem;
+}
