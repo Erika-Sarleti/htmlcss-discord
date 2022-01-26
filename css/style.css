@@ -39,7 +39,7 @@ nav{
 ul{
     list-style: none;
 }
-li{
+header li{
     display: inline-block;
     padding: 0 1.2em;
 }
@@ -53,14 +53,14 @@ li{
     margin-right: 15%;
 }
 
-header button{
+header button, footer button{
     padding: 0.8em 1em;
     border-radius: 20px;
     border: none;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
 }
-a:visited, a:link{
+header a:visited, header a:link{
     text-decoration: none;
     color: #333739;
     font-family: "Roboto", sans-serif;
@@ -102,7 +102,7 @@ p{
 .download > p{
 margin: 2rem 0;
 }
-.content button{
+.content button,.download button{
     padding: 0.7em 1.4em;
     border-radius: 50px;;
     border: none;
@@ -125,7 +125,7 @@ main section:nth-of-type(odd){
 }
 .content{
     width:70%;
-    margin: 3em auto;
+    margin: 3em auto 0;
 }
 .image{
     float:left;
@@ -148,6 +148,7 @@ main section:nth-of-type(odd){
     display: table;
     clear:both;
 }
+/* ultima sezione */
 section:last-child{
     text-align: center;
 
@@ -156,11 +157,88 @@ section:last-child{
     width: 90%;
     height: auto;
 }
-h3{
-    font-size:2em;
+h2{
+    font-size:2rem;
 }
 section:last-child button{
     background-color: #8ea1e1;
     color: white;
     margin: 2rem 0 5rem;
+}
+/* footer */
+footer{
+    background-color: #23272a;
+    height:100vh;
+    padding: 3rem;
+    color: white;
+}
+.main-footer{
+    width: 70%;
+    margin: 0 auto;
+    border-bottom: 1px solid #4a5882 ;
+}
+/* sezione social e lingua */
+.social{
+    width:20%;
+    float: left;
+    margin-right:2em ;
+}
+footer h2{
+    color:#7289da;
+}
+
+.main-footer::after{
+    content:"";
+    display:table;
+    clear: both;
+}
+.lang img{
+    height: 1em;
+    vertical-align: middle;
+}
+.social span{
+    vertical-align:middle;
+}
+.lang{
+    line-height: 1;
+    padding: 1.3em 0;
+    
+
+}
+.icons i{
+    padding-right: 1em;
+    font-size: 1.2em;
+}
+.info{
+    /* float: left; */
+    width: calc(80% - 2em);
+    
+}
+.info-section{
+    margin: 0 4em;
+    display: inline-block;
+    float: left;
+}
+footer h3{
+    color:#7289da;
+}
+footer ul{
+    margin-bottom: 2em;
+}
+footer li{
+    margin-top: .5em;
+}
+.cta{
+    margin: 3em auto 0;
+    width: 70%;
+
+}
+footer button{
+    background-color: #5865f2;
+    float: right;
+    vertical-align: middle;
+}
+footer a{
+    color:white;
+    text-decoration: none;
 }
